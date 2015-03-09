@@ -13,5 +13,8 @@
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
     <string name="login_button">Login</string>
-    <string name="signup_link">Sign Up</string>
+    <string name="sign_up_link">Sign Up</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="Email_hint">Email</string>
+    <string name="SignUp_Button">Sign Up</string>
 </resources>
