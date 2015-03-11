@@ -42,8 +42,8 @@ public class SignUpActivity extends ActionBarActivity {
                 if (username.isEmpty() || password.isEmpty() || email.isEmpty()){
                     AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
                     builder.setMessage(R.string.signup_error_message)
-                        .setTitle(R.string.sign_error_title)
-                        .setPositiveButton(android.R.string.ok, null);
+                            .setTitle(R.string.sign_error_title)
+                            .setPositiveButton(android.R.string.ok, null);
                     AlertDialog dialog = builder.create();
                     dialog.show();
 
