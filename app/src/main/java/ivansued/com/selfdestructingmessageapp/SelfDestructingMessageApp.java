@@ -15,8 +15,5 @@ public class SelfDestructingMessageApp extends Application {
         super.onCreate();
         Parse.initialize(this, "cai5dWwOLNVQ6GsuKLcp8w67vbaJLQjTUkhhiptY", "pZ6WzeKiHJ2MJiPHjY5FuVpnC4ZskYrcYEo3dkz1");
 
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
     }
 }
