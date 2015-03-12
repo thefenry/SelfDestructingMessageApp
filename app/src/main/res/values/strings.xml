@@ -2,9 +2,8 @@
     <string name="app_name">SelfDestructingMessageApp</string>
 
 
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">Inbox</string>
+    <string name="title_section2">Friends</string>
 
     <string name="hello_world">Hello world!</string>
 
@@ -17,4 +16,8 @@
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="Email_hint">Email</string>
     <string name="SignUp_Button">Sign Up</string>
+    <string name="signup_error_message">Please make sure you enter a username, password and email.</string>
+    <string name="sign_error_title">Oh No!</string>
+    <string name="login_error_message"/>
+    <string name="menu_logout_label">Logout</string>
 </resources>
