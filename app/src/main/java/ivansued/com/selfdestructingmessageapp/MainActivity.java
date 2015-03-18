@@ -114,6 +114,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         }
         else if (id == R.id.edit_friends){
             Intent intent = new Intent(this, EditFriendsActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
