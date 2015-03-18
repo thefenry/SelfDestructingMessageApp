@@ -40,13 +40,6 @@ public class EditFriendsActivity extends ListActivity {
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_edit_friends, menu);
-        return true;
-    }
-
-    @Override
     protected void onResume() {
         super.onResume();
 
@@ -138,18 +131,19 @@ public class EditFriendsActivity extends ListActivity {
         {
             //Add Friend
             mFriendsRelation.add(mUsers.get(position));
-            mCurrentUser.saveInBackground(new SaveCallback() {
-                @Override
-                public void done(ParseException e) {
-                    if (e != null){
-                        Log.e(TAG, e.getMessage());
-                    }
-                }
-            });
         }
         else{
             //Remove Friend
+            mFriendsRelation.remove(mUsers.get(position));
         }
 
+        mCurrentUser.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if (e != null){
+                    Log.e(TAG, e.getMessage());
+                }
+            }
+        });
     }
 }
