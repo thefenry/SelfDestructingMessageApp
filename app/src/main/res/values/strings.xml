@@ -20,4 +20,9 @@
     <string name="sign_error_title">Oh No!</string>
     <string name="login_error_message"/>
     <string name="menu_logout_label">Logout</string>
+    <string name="no_new_message">No new Messages</string>
+    <string name="no_friends">Add friends to begin</string>
+    <string name="edit_friends_label">Edit Friends</string>
+    <string name="title_activity_edit_friends">EditFriendsActivity</string>
+    <string name="Query_error">We are sorry</string>
 </resources>

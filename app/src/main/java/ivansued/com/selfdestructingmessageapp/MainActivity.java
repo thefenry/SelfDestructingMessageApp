@@ -112,6 +112,10 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
             ParseUser.logOut();
             returnToLogin();
         }
+        else if (id == R.id.edit_friends){
+            Intent intent = new Intent(this, EditFriendsActivity.class);
+            startActivity(intent);
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -156,12 +160,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         public PlaceholderFragment() {
         }
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
-        }
+
     }
 
 }
