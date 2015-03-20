@@ -26,6 +26,7 @@
     <string name="title_activity_edit_friends">EditFriendsActivity</string>
     <string name="Query_error">We are sorry</string>
     <string name="error_external_storage">There was a problem accessing you device\'s external storage.</string>
+    <string name="error_general">Sorry, there was an error!</string>
     <string-array name="camera_choices">
         <item>Take Picture</item>
         <item>Take Video</item>
