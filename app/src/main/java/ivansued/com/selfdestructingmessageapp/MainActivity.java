@@ -3,7 +3,9 @@ package ivansued.com.selfdestructingmessageapp;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -18,8 +20,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.parse.ParseUser;
+
+import java.net.URI;
 
 
 public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
@@ -39,10 +44,16 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
      */
     ViewPager mViewPager;
     public static final String TAG = MainActivity.class.getSimpleName();
+
+    //This are the response codes for the Image actions
     public static final int TAKE_PHOTO_REQUEST = 0;
     public static final int TAKE_VIDEO_REQUEST = 1;
     public static final int FIND_PHOTO_REQUEST = 2;
     public static final int FIND_VIDEO_REQUEST = 3;
+    public static final int MEDIA_TYPE_IMAGE = 4;
+    public static final int MEDIA_TYPE_VIDEO = 5;
+
+    protected Uri mMediaUri;
 
     protected DialogInterface.OnClickListener mDialogListener = new DialogInterface.OnClickListener() {
         @Override
@@ -50,7 +61,14 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
             switch (which){
                 case 0: //Take Pic
                     Intent takePhotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(takePhotoIntent, TAKE_PHOTO_REQUEST );
+                    mMediaUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
+                    if (mMediaUri == null){
+                        Toast.makeText(MainActivity.this, getString(R.string.error_external_storage),
+                                Toast.LENGTH_LONG).show();
+                    }else{
+                        takePhotoIntent.putExtra(MediaStore.EXTRA_OUTPUT, mMediaUri);
+                        startActivityForResult(takePhotoIntent, TAKE_PHOTO_REQUEST);
+                    }
                     break;
                 case 1: //Take Vid
                     break;
@@ -61,7 +79,29 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
             }
 
         }
+
+        private Uri getOutputMediaFileUri(int mediaType) {
+            //To be safe, you should check that the SDCard is mounted
+            //using Environment.getExternalStorageState() before doing this.
+            if (isExternalStorageAvailable()){
+                return null;
+            }else{
+                return null;
+            }
+        }
+
+        private boolean isExternalStorageAvailable(){
+            String state = Environment.getExternalStorageState();
+            if (state.equals(Environment.MEDIA_MOUNTED)){
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     };
+
 
 
     @Override
