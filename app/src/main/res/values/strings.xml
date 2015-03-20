@@ -27,6 +27,9 @@
     <string name="Query_error">We are sorry</string>
     <string name="error_external_storage">There was a problem accessing you device\'s external storage.</string>
     <string name="error_general">Sorry, there was an error!</string>
+    <string name="video_file_size_warning">The selected video must be less than 10mb.</string>
+    <string name="error_opening_media">There was a problem opening the file</string>
+    <string name="error_fize_size_excess">The selected file is too large! Select a new file.</string>
     <string-array name="camera_choices">
         <item>Take Picture</item>
         <item>Take Video</item>
