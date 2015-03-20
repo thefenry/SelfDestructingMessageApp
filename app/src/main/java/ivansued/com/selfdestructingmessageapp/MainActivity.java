@@ -90,6 +90,9 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
                     }
                     break;
                 case 2: //find pic
+                    Intent choosePhotoIntent = new Intent(Intent.ACTION_GET_CONTENT);
+                    choosePhotoIntent.setType("image/*");
+                    startActivityForResult(choosePhotoIntent, FIND_PHOTO_REQUEST);
                     break;
                 case 3: //find vid
                     break;
@@ -201,10 +204,19 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK){
-            //add it to gallery
-            Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-            mediaScanIntent.setData(mMediaUri);
-            sendBroadcast(mediaScanIntent);
+            if (requestCode == FIND_PHOTO_REQUEST || requestCode== FIND_VIDEO_REQUEST){
+                if (data == null){
+                    Toast.makeText(this, getString(R.string.error_general), Toast.LENGTH_LONG).show();
+                }
+                else{
+                    mMediaUri = data.getData();
+                }
+            }else {
+                //add it to gallery
+                Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                mediaScanIntent.setData(mMediaUri);
+                sendBroadcast(mediaScanIntent);
+            }
         }else if(resultCode != RESULT_CANCELED) {
             Toast.makeText(this, getString(R.string.error_general), Toast.LENGTH_LONG);
         }
