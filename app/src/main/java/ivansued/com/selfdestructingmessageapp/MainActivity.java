@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -24,7 +25,11 @@ import android.widget.Toast;
 
 import com.parse.ParseUser;
 
+import java.io.File;
 import java.net.URI;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 
 public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
@@ -84,7 +89,35 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
             //To be safe, you should check that the SDCard is mounted
             //using Environment.getExternalStorageState() before doing this.
             if (isExternalStorageAvailable()){
-                return null;
+                //Get external storage directory
+                String appName = MainActivity.this.getString(R.string.app_name);
+                File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+                        appName);
+                //Create our own subdirectory
+                if (!mediaStorageDir.exists()){
+                    if(!mediaStorageDir.mkdirs()){
+                        Log.e(TAG, "Failed to create Directory");
+                        return null;
+                    }
+                }
+                //Create file name
+                //Create the file
+                File mediaFile;
+                Date now = new Date();
+                String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(now);
+
+                String path = mediaStorageDir.getPath() + File.separator;
+                if (mediaType == MEDIA_TYPE_IMAGE)
+                {
+                    mediaFile = new File(path+"IMG_"+timestamp+".jpg");
+                }else if(mediaType== MEDIA_TYPE_VIDEO){
+                    mediaFile = new File(path+"VID_"+timestamp+".mp4");
+                }else{
+                    return null;
+                }
+                Log.d(TAG, "File " + Uri.fromFile(mediaFile));
+                //Return file uri
+                return Uri.fromFile(mediaFile);
             }else{
                 return null;
             }
