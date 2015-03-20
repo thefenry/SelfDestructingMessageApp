@@ -25,4 +25,10 @@
     <string name="edit_friends_label">Edit Friends</string>
     <string name="title_activity_edit_friends">EditFriendsActivity</string>
     <string name="Query_error">We are sorry</string>
+    <string-array name="camera_choices">
+        <item>Take Picture</item>
+        <item>Take Video</item>
+        <item>Choose Picture</item>
+        <item>Choose Video</item>
+    </string-array>
 </resources>

@@ -1,7 +1,10 @@
 package ivansued.com.selfdestructingmessageapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -36,6 +39,30 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
      */
     ViewPager mViewPager;
     public static final String TAG = MainActivity.class.getSimpleName();
+    public static final int TAKE_PHOTO_REQUEST = 0;
+    public static final int TAKE_VIDEO_REQUEST = 1;
+    public static final int FIND_PHOTO_REQUEST = 2;
+    public static final int FIND_VIDEO_REQUEST = 3;
+
+    protected DialogInterface.OnClickListener mDialogListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            switch (which){
+                case 0: //Take Pic
+                    Intent takePhotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivityForResult(takePhotoIntent, TAKE_PHOTO_REQUEST );
+                    break;
+                case 1: //Take Vid
+                    break;
+                case 2: //find pic
+                    break;
+                case 3: //find vid
+                    break;
+            }
+
+        }
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,15 +133,18 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_logout) {
-            ParseUser.logOut();
-            returnToLogin();
-        }
-        else if (id == R.id.edit_friends){
-            Intent intent = new Intent(this, EditFriendsActivity.class);
-            startActivity(intent);
+        switch (id){
+            case R.id.action_logout:
+                ParseUser.logOut();
+                returnToLogin();
+            case R.id.edit_friends:
+                Intent intent = new Intent(this, EditFriendsActivity.class);
+                startActivity(intent);
+            case R.id.action_camera:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setItems(R.array.camera_choices, mDialogListener);
+                AlertDialog dialog = builder.create();
+                dialog.show();
         }
 
         return super.onOptionsItemSelected(item);
