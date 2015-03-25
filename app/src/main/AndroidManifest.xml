@@ -42,7 +42,7 @@
             android:label="@string/title_activity_edit_friends"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo" >
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ivansued.com.selfdestructingmessageapp.MainActivity" />
@@ -52,7 +52,7 @@
             android:label="@string/title_activity_receipients"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo">
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ivansued.com.selfdestructingmessageapp.MainActivity" />
