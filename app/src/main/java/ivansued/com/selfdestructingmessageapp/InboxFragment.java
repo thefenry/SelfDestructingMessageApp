@@ -77,6 +77,10 @@ public class InboxFragment extends ListFragment {
             startActivity(intent);
         }else{
             //View the video
+            //This is a simple intent that does not require a new activity.
+            Intent intent = new Intent(Intent.ACTION_VIEW, fileUri);
+            intent.setDataAndType(fileUri, "video/*");
+            startActivity(intent);
         }
     }
 }
