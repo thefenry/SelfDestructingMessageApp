@@ -9,6 +9,9 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class ViewImageActivity extends ActionBarActivity {
 
@@ -21,5 +24,15 @@ public class ViewImageActivity extends ActionBarActivity {
         Uri imageUri = getIntent().getData();
         //This line uses picasso to add image to image view.
         Picasso.with(this).load(imageUri.toString()).into(imageView);
+
+        //Create a timer variable that will finish the activity by calling the anonymous class after
+        //10 seconds
+        Timer time = new Timer();
+        time.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                finish();
+            }
+        },10*1000);
     }
 }
