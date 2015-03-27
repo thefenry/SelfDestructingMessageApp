@@ -42,4 +42,5 @@
     <string name="error_selecting_file">There was an error with the file selected. Please select a different file.</string>
     <string name="error_selecting_file_title">We are sorry!</string>
     <string name="error_sending_message">There was an error sending your message, please try again.</string>
+    <string name="title_activity_view_image">Image Viewer</string>
 </resources>
