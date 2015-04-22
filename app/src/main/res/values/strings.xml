@@ -11,7 +11,7 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
-    <string name="login_button">Login</string>
+    <string name="login_button">SIGN IN</string>
     <string name="sign_up_link">Don\'t have an account? Sign Up</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="Email_hint">Email</string>
