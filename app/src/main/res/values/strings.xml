@@ -43,4 +43,5 @@
     <string name="error_selecting_file_title">We are sorry!</string>
     <string name="error_sending_message">There was an error sending your message, please try again.</string>
     <string name="title_activity_view_image">Image Viewer</string>
+    <string name="content_desc_background">App Background Image</string>
 </resources>
