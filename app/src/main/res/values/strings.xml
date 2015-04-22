@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SelfDestructingMessageApp</string>
+    <string name="app_name">Listen</string>
 
 
     <string name="title_section1">Inbox</string>
@@ -12,7 +12,7 @@
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
     <string name="login_button">Login</string>
-    <string name="sign_up_link">Sign Up</string>
+    <string name="sign_up_link">Don\'t have an account? Sign Up</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="Email_hint">Email</string>
     <string name="SignUp_Button">Sign Up</string>
@@ -44,4 +44,5 @@
     <string name="error_sending_message">There was an error sending your message, please try again.</string>
     <string name="title_activity_view_image">Image Viewer</string>
     <string name="content_desc_background">App Background Image</string>
+    <string name="subtitle">A Treehouse Project</string>
 </resources>
