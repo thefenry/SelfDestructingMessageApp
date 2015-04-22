@@ -1,5 +1,7 @@
 package ivansued.com.selfdestructingmessageapp;
 
+import android.app.ActionBar;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -18,7 +20,7 @@ import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
 
-public class LoginActivity extends ActionBarActivity {
+public class LoginActivity extends Activity {
     protected EditText mUsername;
     protected EditText mPassword;
     protected Button mLogInButton;
@@ -30,6 +32,10 @@ public class LoginActivity extends ActionBarActivity {
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        //Hide actionbar upon creation if there was one but our app does not have an actionbar
+//        ActionBar actionBar = getActionBar();
+//        actionBar.hide();
 
         mSignUpTextView = (TextView) findViewById(R.id.signUpTextView);
         mSignUpTextView.setOnClickListener(new View.OnClickListener() {
