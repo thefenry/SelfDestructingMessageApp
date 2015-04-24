@@ -2,40 +2,20 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/background_fill"
+                style="@style/AuthBackground"
                 tools:context="ivansued.com.selfdestructingmessageapp.LoginActivity">
 
     <ImageView
         android:id="@+id/backgroundImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:contentDescription="@string/content_desc_background"
-        android:scaleType="fitStart"
-        android:src="@drawable/background"/>
+        style="@style/AuthBackgroundImage"/>
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="@string/app_name"
-        android:textColor="@android:color/white"
-        android:textSize="60sp"
-        android:textStyle="bold"/>
+        style="@style/AuthTitle"/>
 
     <TextView
         android:id="@+id/Subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:layout_centerHorizontal="true"
-        android:text="@string/subtitle"
-        android:textColor="@android:color/white"
-        android:textSize="13sp"/>
+        style="@style/AuthSubtitle"/>
 
     <LinearLayout
         android:id="@+id/editTextLayout"
@@ -82,7 +62,6 @@
         android:layout_below="@+id/editTextLayout"
         android:layout_centerVertical="true"
         android:text="@string/login_button"
-        android:background="@drawable/button_custom"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:textSize="13sp"
