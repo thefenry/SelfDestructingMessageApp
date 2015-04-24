@@ -15,7 +15,7 @@
     <string name="sign_up_link">Don\'t have an account? Sign Up</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="Email_hint">Email</string>
-    <string name="SignUp_Button">Sign Up</string>
+    <string name="SignUp_Button">SIGN UP</string>
     <string name="signup_error_message">Please make sure you enter a username, password and email.</string>
     <string name="sign_error_title">Oh No!</string>
     <string name="login_error_message"/>
