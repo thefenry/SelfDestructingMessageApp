@@ -45,4 +45,6 @@
     <string name="title_activity_view_image">Image Viewer</string>
     <string name="content_desc_background">App Background Image</string>
     <string name="subtitle">A Treehouse Project</string>
+    <string name="cancel_button_label">CANCEL</string>
+    <string name="content_desc_button_divider">Button Divider</string>
 </resources>

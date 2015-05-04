@@ -40,7 +40,9 @@
     <Button
         android:id="@+id/login_Button"
         android:text="@string/login_button"
-        style="@style/AuthButton"/>
+        style="@style/AuthButton"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextLayout"/>
 
     <TextView
         android:id="@+id/signUpTextView"

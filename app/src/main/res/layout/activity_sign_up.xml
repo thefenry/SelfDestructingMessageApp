@@ -43,8 +43,30 @@
             android:inputType="textPassword"/>
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonDivider"
+        android:layout_below="@+id/editTextLayout"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/button_divider"
+        android:contentDescription="@string/content_desc_button_divider"/>
+
     <Button
         android:id="@+id/signUpButton"
         style="@style/AuthButton"
-        android:text="@string/SignUp_Button"/>
+        android:text="@string/SignUp_Button"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextLayout"
+        android:layout_toLeftOf="@+id/buttonDivider"
+        android:layout_marginRight="0dp"/>
+
+    <Button
+        android:id="@+id/cancelButton"
+        style="@style/AuthButton"
+        android:text="@string/cancel_button_label"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTextLayout"
+        android:layout_toRightOf="@+id/buttonDivider"
+        android:layout_marginLeft="0dp"/>
 </RelativeLayout>

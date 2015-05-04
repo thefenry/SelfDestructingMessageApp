@@ -73,11 +73,9 @@
         <item name="android:textSize">17sp</item>
     </style>
 
-    <style name="AuthButton">
+    <style name="AuthButton" parent="android:Widget.Holo.Light.Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_alignParentLeft">true</item>
-        <item name="android:layout_below">@+id/editTextLayout</item>
         <item name="android:layout_centerVertical">true</item>
         <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
         <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
