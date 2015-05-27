@@ -1,4 +1,4 @@
-package ivansued.com.selfdestructingmessageapp;
+package ivansued.com.selfdestructingmessageapp.ui;
 
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
@@ -11,6 +11,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import ivansued.com.selfdestructingmessageapp.R;
 
 
 public class ViewImageActivity extends ActionBarActivity {

@@ -1,4 +1,4 @@
-package ivansued.com.selfdestructingmessageapp;
+package ivansued.com.selfdestructingmessageapp.utils;
 
 /**
  * Created by isued on 3/18/2015.

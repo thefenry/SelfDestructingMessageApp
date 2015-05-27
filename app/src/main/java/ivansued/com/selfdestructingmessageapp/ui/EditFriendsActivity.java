@@ -1,13 +1,9 @@
-package ivansued.com.selfdestructingmessageapp;
+package ivansued.com.selfdestructingmessageapp.ui;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ListActivity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
@@ -21,6 +17,9 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.util.List;
+
+import ivansued.com.selfdestructingmessageapp.utils.ParseConstants;
+import ivansued.com.selfdestructingmessageapp.R;
 
 
 public class EditFriendsActivity extends ListActivity {

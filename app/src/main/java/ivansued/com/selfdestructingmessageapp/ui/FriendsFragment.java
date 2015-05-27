@@ -1,4 +1,4 @@
-package ivansued.com.selfdestructingmessageapp;
+package ivansued.com.selfdestructingmessageapp.ui;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -16,6 +16,9 @@ import com.parse.ParseRelation;
 import com.parse.ParseUser;
 
 import java.util.List;
+
+import ivansued.com.selfdestructingmessageapp.utils.ParseConstants;
+import ivansued.com.selfdestructingmessageapp.R;
 
 /**
  * Created by isued on 3/18/2015.

@@ -1,10 +1,9 @@
-package ivansued.com.selfdestructingmessageapp;
+package ivansued.com.selfdestructingmessageapp.ui;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.net.Uri;
 import android.support.v4.app.NavUtils;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -26,6 +25,10 @@ import com.parse.SaveCallback;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import ivansued.com.selfdestructingmessageapp.utils.FileHelper;
+import ivansued.com.selfdestructingmessageapp.utils.ParseConstants;
+import ivansued.com.selfdestructingmessageapp.R;
 
 
 public class RecipientsActivity extends ListActivity {

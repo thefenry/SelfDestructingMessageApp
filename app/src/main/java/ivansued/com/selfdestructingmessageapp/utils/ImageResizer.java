@@ -1,4 +1,4 @@
-package ivansued.com.selfdestructingmessageapp;
+package ivansued.com.selfdestructingmessageapp.utils;
 
 import java.io.ByteArrayOutputStream;
 

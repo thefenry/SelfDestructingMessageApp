@@ -1,4 +1,4 @@
-package ivansued.com.selfdestructingmessageapp;
+package ivansued.com.selfdestructingmessageapp.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.parse.ParseObject;
 
 import java.util.List;
+
+import ivansued.com.selfdestructingmessageapp.utils.ParseConstants;
+import ivansued.com.selfdestructingmessageapp.R;
 
 /**
  * Created by isued on 3/26/2015.

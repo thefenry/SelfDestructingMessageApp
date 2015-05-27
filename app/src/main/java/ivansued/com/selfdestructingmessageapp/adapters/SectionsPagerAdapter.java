@@ -1,4 +1,4 @@
-package ivansued.com.selfdestructingmessageapp;
+package ivansued.com.selfdestructingmessageapp.adapters;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -6,6 +6,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.Locale;
+
+import ivansued.com.selfdestructingmessageapp.ui.FriendsFragment;
+import ivansued.com.selfdestructingmessageapp.ui.InboxFragment;
+import ivansued.com.selfdestructingmessageapp.R;
 
 /**
  * Created by isued on 3/12/2015.

@@ -1,4 +1,4 @@
-package ivansued.com.selfdestructingmessageapp;
+package ivansued.com.selfdestructingmessageapp.ui;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -7,7 +7,6 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.parse.FindCallback;
@@ -19,6 +18,10 @@ import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import ivansued.com.selfdestructingmessageapp.utils.ParseConstants;
+import ivansued.com.selfdestructingmessageapp.R;
+import ivansued.com.selfdestructingmessageapp.adapters.MessageAdapter;
 
 /**
  * Created by isued on 3/18/2015.

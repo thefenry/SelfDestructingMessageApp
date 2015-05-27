@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
 
       xmlns:tools="http://schemas.android.com/tools"
-      tools:context="ivansued.com.selfdestructingmessageapp.RecipientsActivity">
+      tools:context="ivansued.com.selfdestructingmessageapp.ui.RecipientsActivity">
     <item android:id="@+id/action_send"
           android:title="@string/Send"
           android:orderInCategory="100"
